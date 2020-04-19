@@ -1,0 +1,982 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+    <style>
+      .checked
+      {
+        color: orange;
+      }
+      html
+       {
+         scroll-behavior: smooth;
+         padding:0;
+         margin:0;
+       }
+     
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height:auto;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.topnav img
+{
+  float: left;
+}
+.topnav .icon {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .topnav.responsive {position: fixed;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+   
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    
+  }
+  .topnav.responsive img {
+    float: none;
+    display: block;
+    text-align: left;
+    
+  }
+
+}
+
+       .intro
+       {
+        background-image: url(watch_back.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height:100vh;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        color: #555;
+        font-weight: bold;
+        letter-spacing: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding:0;
+         margin:0;
+         display: block;
+       }
+       .box 
+       {
+           position:absolute;
+           left:50%;
+           top: 50%;
+           transform: translate(-50%,-50%) ;
+           text-align: center;
+       }
+       .a1
+       {
+        text-transform: uppercase;
+           animation-name: moveinleft;
+           animation-duration: 1s;
+           display: block;
+       }
+       .a2
+       {
+        text-transform: uppercase;
+        animation-name: moveinright;
+           animation-duration: 1s;
+           display: block;
+       }
+       @keyframes moveinleft {
+           0%
+           {
+               opacity: 0;
+               transform: translateX(-100px);
+           }
+     
+           100%
+           {
+               opacity: 1;
+               transform: translate(0);
+           }
+       }
+       @keyframes moveinright {
+           0%
+           {
+               opacity: 0;
+               transform: translateX(100px);
+           }
+     
+           100%
+           {
+               opacity: 1;
+               transform: translate(0);
+           }
+       }
+       .greenbtn:link,.greenbtn:visited
+       {
+          text-transform: uppercase;
+          text-decoration: none;
+          padding:15px 40px;
+          transition: all .2s;
+          display: block;
+          border-radius: 100px;
+          
+       }
+       .greenbtn
+       {
+           background-color:darkgreen;
+           color: beige;
+          
+           
+       }
+       .greenbtn:hover
+       {
+           transform: translateY(-3px);
+           box-shadow: 0 10px 20px black;
+           
+       }
+       .greenbtn:active
+       {
+           transform: translateY(-1px);
+           box-shadow: 0 10px 20px black;
+       }
+
+       .launching
+       {
+        background-image: url(watch_back_1.png);
+        background-repeat: no-repeat;
+        background-size:100% 100%;
+        height:100vh;
+        
+        position: relative;
+        z-index: 1;
+        color: #555;
+        font-weight: bold;
+        letter-spacing: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding:0;
+         margin:0;
+        }
+    div.launching span.new_products ul.sameline li  img:hover:not(.active)
+       {
+   transform: scale(1);     
+       }
+       div.launching span.new_products ul.sameline:hover li  img
+       {
+        transform: scale(.5); 
+       }
+
+       .new_products 
+       {
+           position:absolute;
+           left:50%;
+           top: 50%;
+           transform: translate(-50%,-50%) ;
+           text-align: center;
+           width: 80vw;
+           height: 35vh;
+       }
+       ul.sameline li img
+       {
+        transition: transform 1s ease;
+        width: 19vw;
+        height: 30vh;
+
+        
+       }
+       ul.sameline
+       {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      
+      }
+      li 
+      {
+        display:inline-block; 
+      }
+      .surprise
+      {
+        background-image: url(s_back.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height:100vh;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        color: #555;
+       
+        
+        font-family: Arial, Helvetica, sans-serif;
+        padding:0;
+         margin:0;
+         display: block;
+       }
+       .modal 
+       {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  border-left: 50%;
+  border-top: 50%;
+  transform: translate(-50%,-50%) ;
+  width: 100vw; /* Full width */
+  height:50vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   }
+   .scard
+   {
+     
+    width: 20%;
+     display: inline-block;
+     box-shadow: 5px 5px 40px black;
+    
+     border-radius: 5px; 
+     margin: 2%;
+     background-image: linear-gradient(90deg,white,pink);
+     display: inline-block;
+   }
+button
+{
+  width: 100%;
+}
+         .popular
+         {
+        background-image:linear-gradient(white ,url(pop_back1.png));
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height:100vh;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        color: #555;
+        
+        letter-spacing:1px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding:0;
+         margin:0;
+         display: block;
+       }
+       .card 
+       {
+       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+       transition: 0.3s;
+       width: 15%;
+       height: 35%;
+       margin: 2%;
+       position: relative;
+      float: left;
+      
+   
+      
+
+   }
+
+.card:hover 
+      {
+       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+
+.container
+ {
+  padding: 3px;
+  text-align: center;
+  padding-top: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: black;
+}
+
+li.card img
+{
+ width: 100%;
+ height: 40%;
+ border-radius: 50px;
+ margin: 2px;
+ background-image: linear-gradient(45deg,white,yellow);
+
+
+display: inline-block;
+}
+.reveiw
+{
+  background-image: url(user_back.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height:100vh;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        color: #555;
+       
+        letter-spacing: 1px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding:0;
+         margin:0;
+         display: block;
+         
+}
+
+.user
+{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color:silver;
+  font-size: 2vw;
+       transition: 0.3s;
+       width: 35%;
+       height: 50%;
+       margin: 2%;
+       position: relative;
+      float: left;
+      left:20vh;
+      top:20vh;
+     
+   
+}
+.user:hover
+{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color:greenyellow;
+  color:black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+div.user  div.tooltip img
+{
+  float: left;
+  padding-right: 10px;
+}
+.user_entry
+{
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding-right: 20px;
+  position:absolute;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%,-50%) ;
+  height: auto;
+  width: 75vw;
+  height: 80vh;
+}
+.user_entry_back
+{
+
+  background-image: url(reveiw_back.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height:100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  color:black;
+  
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding:0;
+  margin:0;
+  display: block;
+}
+
+input[type=text], select, textarea
+ {
+  width: 60vw;
+  height: 5vh;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  width: 10vw;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
+.col-25 {
+  float: left;
+  width: 25vw;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75vw;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 900px) {
+  .col-25, .col-75  {
+    width: 40vw;
+    margin-top: 0;
+  }
+  input[type=submit]{
+    width: 10vw;
+    margin-top: 2px;
+  }
+}
+.footer
+{
+  background-image: url(foot_back.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height:100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding:0;
+  margin:0;
+  display: block;
+  font-size: 1vw;
+}
+.footer1
+{
+
+  height: 80%;
+  width: 35%;
+  position: relative;
+      float: left;
+      left:5vh;
+      top:20vh;
+}
+.footer1 img
+{
+  padding: 4%;
+}
+.footer2
+{
+  height: 80%;
+  width: 35%;
+  position: relative;
+      float: left;
+  left: 10vw;
+      top:20vh;
+}
+.pad
+{
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 1vh;
+  text-align: center;
+}
+
+    </style>  
+</head>       
+<body>
+  <a name="introduction"></a>
+  <div class="topnav" id="myTopnav">
+    
+        <img src="logo_3.png" height=40px width=40px >
+        <a href="#introduction" onclick="myFunction1()" class="active">Intro Section</a>
+        <a href="#launch" onclick="myFunction1()">Launching Soon</a>
+        <a href="#discount" onclick="myFunction1()">Surprise Section</a>
+        <a href="#pop" onclick="myFunction1()">Most bought items</a>
+        <a href="#rev" onclick="myFunction1()">Reveiws From Others</a>
+        <a href="#user_rev" onclick="myFunction1()">Add Reveiw</a>
+        <a href="#foot" onclick="myFunction1()">Footer</a>
+        <a href="https://www.google.com/covid19/" target="_blank" onclick="myFunction1()">COVID-19</a></li>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+   
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+      <div class="intro">
+      <span class="box">
+         <h1 class="a1">WATCHMART</h1>
+         <h4 class="a2">style is what matters
+         </h4>
+         <a href="#discount" class="greenbtn">surprises</a>
+        
+      </span>
+    
+      </div>
+      <a name="launch"></a>
+      <div class="Launching">
+          <span class="new_products">
+            <h1>LAUNCHING SOON<h1></h1>
+            <ul class="sameline">
+               <li><img src="watch_1.png" ></li>
+               <li ><img src="watch_2.png"  ></li>
+               <li ><img src="watch_3.png"  ></li>
+               <li ><img src="watch_4.png" ></li>
+            </ul>
+            
+          </span>
+  
+     </div> 
+     <a name="discount"></a>
+     <div class="surprise">
+       
+       <div  class="scard">
+         <img src="s_watch_1.png" alt="Avatar" style="width:100%;height: 30vh;">
+        <h2>Rs <strike>7000</strike></h2>
+        <h2 style="color:brown">Rs 5500</h2>
+
+        <!-- Trigger/Open The Modal -->
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">KNOW MORE</button>
+        
+        <!-- The Modal -->
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content w3-animate-top w3-card-4">
+            <header class="w3-container w3-teal"> 
+              <span onclick="document.getElementById('id01').style.display='none'" 
+              class="w3-button w3-display-topright">&times;</span>
+              <h3>Terms and Conditions</h3>
+            </header>
+            <div class="w3-container">
+              <img src="s_watch_1.png" height=100% width=30% style="float: left;">
+              <p>Offer is applicable for all</p>
+              <p>Click on the "x" to go out of the window</p>
+            </div>
+            <footer class="w3-container w3-teal">
+              <p>Thank you!</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+     
+     <div  class="scard"><img src="s_watch_2.png" alt="Avatar" style="width:100%;height: 30vh;">
+      <h2>Rs <strike>10000</strike></h2>
+      <h2 style="color:brown">Rs 7000</h2>
+  
+          <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">KNOW MORE</button>
+        
+        <!-- The Modal -->
+        <div id="id02" class="w3-modal">
+          <div class="w3-modal-content w3-animate-top w3-card-4">
+            <header class="w3-container w3-teal"> 
+              <span onclick="document.getElementById('id02').style.display='none'" 
+              class="w3-button w3-display-topright">&times;</span>
+              <h3>Terms and Conditions</h3>
+            </header>
+            <div class="w3-container">
+              <img src="s_watch_2.png" height=100% width=30% style="float: left;">
+              <p>Offer is applicable for all</p>
+              <p>Click on the "x" to go out of the window</p>
+            </div>
+            <footer class="w3-container w3-teal">
+              <p>Thank you!</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    
+      <div  class="scard">
+        <img src="s_watch_3.png" alt="Avatar" style="width:100%;height: 30vh;">
+        <h2>Rs <strike>9000</strike></h2>
+        <h2 style="color:brown">Rs 8000</h2>
+    
+            <!-- Trigger/Open The Modal -->
+            <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-black">KNOW MORE</button>
+        
+            <!-- The Modal -->
+            <div id="id03" class="w3-modal">
+              <div class="w3-modal-content w3-animate-top w3-card-4">
+                <header class="w3-container w3-teal"> 
+                  <span onclick="document.getElementById('id03').style.display='none'" 
+                  class="w3-button w3-display-topright">&times;</span>
+                  <h3>Terms and Conditions</h3>
+                </header>
+                <div class="w3-container">
+                  <img src="s_watch_3.png" height=100% width=30% style="float: left;">
+                  <p>Offer is applicable for all</p>
+                  <p>Click on the "x" to go out of the window</p>
+                </div>
+                <footer class="w3-container w3-teal">
+                  <p>Thank you!</p>
+                </footer>
+              </div>
+            </div>
+          </div>
+          
+          <div  class="scard">
+            <img src="s_watch_4.png" alt="Avatar" style="width:100%;height: 30vh;">
+            <h2>Rs <strike>6000</strike></h2>
+            <h2 style="color:brown">Rs 5500</h2>
+      
+              <!-- Trigger/Open The Modal -->
+              <button onclick="document.getElementById('id04').style.display='block'" class="w3-button w3-black">KNOW MORE</button>
+        
+        <!-- The Modal -->
+        <div id="id04" class="w3-modal">
+          <div class="w3-modal-content w3-animate-top w3-card-4">
+            <header class="w3-container w3-teal"> 
+              <span onclick="document.getElementById('id04').style.display='none'" 
+              class="w3-button w3-display-topright">&times;</span>
+              <h3>Terms and Conditions</h3>
+            </header>
+            <div class="w3-container">
+              <img src="s_watch_4.png" height=100% width=30% style="float: left;">
+              <p>Offer is applicable for all</p>
+              <p>Click on the "x" to go out of the window</p>
+            </div>
+            <footer class="w3-container w3-teal">
+              <p>Thank you!</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+      <h1><center>SURPRISE SECTION</center></h1>
+   </div>
+     <script>
+      // Get the modal
+      var modal1 = document.getElementById('id01');
+      var modal2 = document.getElementById('id02');
+      var modal3 = document.getElementById('id03');
+      var modal4 = document.getElementById('id04');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        }
+        window.onclick = function(event) {
+        if (event.target == modal2) {
+          modal2.style.display = "none";
+        }
+        window.onclick = function(event) {
+        if (event.target == modal3) {
+          modal3.style.display = "none";
+        }
+        window.onclick = function(event) {
+        if (event.target == modal4) {
+          modal4.style.display = "none";
+        }
+      }
+      </script>
+      <a name="pop"></a>
+      <div class="popular">
+        <span class="popul">
+      
+          <ul >
+        <li class="card">
+          <img src="pop_watch_1.png" >
+          <div class="container" style="font-size: 1vw;">
+            <h4><b>Rs <strike>7000</strike></b></h4> 
+            <p>Rs 4000</p> 
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </li>
+        <li class="card">
+          <img src="pop_watch_2.png" >
+          <div class="container" style="font-size: 1vw;">
+            <h4><b>Rs <strike>9000</strike></b></h4> 
+            <p>Rs 7500</p> 
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span> 
+          </div>
+        </li>
+        <li class="card" >
+          <img src="pop_watch_3.png" >
+          <div class="container"  style="font-size: 1vw;">
+            <h4><b>Rs <strike>3000</strike></b></h4> 
+            <p>Rs 1500</p> 
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </li>
+        <li class="card">
+          <img src="pop_watch_4.png" >
+          <div class="container"  style="font-size: 1vw;">
+            <h4><b>Rs <strike>2500</strike></b></h4> 
+            <p>Rs 1200</p> 
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </li>
+        <li class="card">
+          <img src="pop_watch_5.png">
+          <div class="container"  style="font-size: 1vw;">
+            <h4><b>Rs <strike>4500</strike></b></h4> 
+            <p>Rs 3000</p> 
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </li>
+        <center><h1>MOST BOUGHT ITEMS</h1></center>
+        <li class="card">
+          <img src="pop_watch_6.png" >
+          <div class="container" style="font-size: 1vw;" >
+            <h4><b>Rs <strike>1500</strike></b></h4> 
+            <p>Rs 800</p> 
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </li>
+        <li class="card">
+          <img src="pop_watch_7.png" >
+          <div class="container" style="font-size: 1vw;">
+            <h4><b>Rs <strike>3000</strike></b></h4> 
+            <p>Rs 1500</p> 
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </li>
+        <li class="card">
+          <img src="pop_watch_8.png" >
+          <div class="container" style="font-size: 1vw;">
+            <h4><b>Rs <strike>2500</strike></b></h4> 
+            <p>Rs 1100</p> 
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </li>
+        <li class="card">
+          <img src="pop_watch_9.png" >
+          <div class="container" style="font-size: 1vw;">
+            <h4><b>Rs <strike>10000</strike></b></h4> 
+            <p>Rs 8000</p> 
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+        </li>
+        <li class="card">
+          <img src="pop_watch_10.png" >
+          <div class="container" style="font-size: 1vw;">
+            <h4><b>Rs <strike>8500</strike></b></h4> 
+            <p>Rs 6000</p> 
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </li>
+        </ul>
+        </span>
+        </div>  
+        <a name="rev" ></a>
+        
+        <div class="reveiw">
+           <span class="user_span">
+             <h1>user Reveiws</h1>
+          <div class="user" >
+            <div class="tooltip">
+            <span class="tooltiptext">STEVE JOBS</span>
+         <img src="steve.png" height=100% width=35%>
+         "the watches over here are best in the world, my next major investment will be in the apple watch which i hope will change the world"
+        </div>
+         </div>
+        
+         <div class="user">
+           <div  class="tooltip">
+          <span class="tooltiptext">DONALD TRUMP</span>
+          <img src="trump.png" height=100% width=35%>
+        "nobody knows more than me about the importance of watches, these the quality of watches the we should wear and continue the legacy of America" 
+      </div>  
+        </div>
+
+         </span>
+          </div> 
+          <a name="user_rev"></a>
+
+          <div class="user_entry_back">
+            
+          <div class="user_entry">
+            <center><h1>YOUR FEEDBACK</h1></center>
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="country">Country</label>
+                </div>
+                <div class="col-75">
+                  <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">Subject</label>
+                </div>
+                <div class="col-75">
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <input type="submit" value="Submit">
+              </div>
+            </div>
+          </div>
+          <a name="foot"></a>
+          <div class="footer">
+           <div class="footer1">
+         <h2>Copyright &copy; 2016 WATCHMART.co</h2>
+            all right reserved<br>
+            no part of the publication can be reproduced,distributed, or transmitted in any form or by any means,
+            including photocopying, recording or any other electronic, mechanical method, without the prior written
+            permission of the publisher, except in the case of brief quotations emboided in critcal reviews and
+            certain other noncommercial uses are permitted by Copyright law. For permission request,
+            you can reach us by the "contact us" hyperlink<br>
+            <img src="logo_3.png" height="20%" width="20%" >
+            
+          </div>
+          <div class="footer2">
+          <h2>TERMS AND CONDITIONS</h2>
+          the services offered by WATCHMART under the terms and servise include various products and servicesto help you sell goods and services to buyers, 
+          whether online or in person , or both. Any such services offered by WATCHMART are reffered to in terms and conditiond . you can reveiw the current
+           version of the terms and conditions at any time at https://www.watchmart.com/terms_nd_condtions WATCHMART reserves the right to update the terms 
+           and conditionsby postiong updates and changes to the shofpify websites, you are advised to check the terms aand conditionsfrom time to time for any updates that 
+           may impact you. And if you do not accept these conditions, you must cease using our services <br>
+          <span class="pad" > <a  href="wdvbw" class="greenbtn" style="width: 30vh;">CONTACT US</a></span><br>
+           <span class="pad"><a  href="wdvbw" class="greenbtn" style="width: 30vh;">PRIVACY POLICY</a></span><br>
+           <a  href="#introduction" class="greenbtn" style="width: 30vh;">BACK TO TOP</a>
+           
+                
+          </div>
+            </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
